@@ -1,3 +1,4 @@
+import { BookOpenCheck, CheckCheck, CirclePlus, X } from "lucide-react";
 import "./App.css";
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <>
       <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
         {/* <!-- navbar --> */}
-        <div className="fixed top-0 left-0 text-center w-full header bg-violet-600 py-4 text-white font-bold text-lg shadow-lg">
+        <div className="fixed top-0 left-0 text-center w-full header bg-slate-600 py-4 text-white font-bold text-lg shadow-lg">
           Simple Todo Application with Redux
         </div>
 
@@ -13,11 +14,7 @@ function App() {
           {/* <!-- header --> */}
           <div>
             <form className="flex items-center bg-gray-100 px-4 py-4 rounded-md">
-              <img
-                src="./images/notes.png"
-                className="w-6 h-6"
-                alt="Add todo"
-              />
+              <BookOpenCheck />
               <input
                 type="text"
                 placeholder="Type your todo"
@@ -25,17 +22,15 @@ function App() {
               />
               <button
                 type="submit"
-                className="appearance-none w-8 h-8 bg-[url('./images/plus.png')] bg-no-repeat bg-contain"
-              ></button>
+                className="appearance-none w-8 h-8 bg-no-repeat bg-contain"
+              >
+                <CirclePlus />
+              </button>
             </form>
 
             <ul className="flex justify-between my-4 text-xs text-gray-500">
               <li className="flex space-x-1 cursor-pointer">
-                <img
-                  className="w-4 h-4"
-                  src="./images/double-tick.png"
-                  alt="Complete"
-                />
+                <CheckCheck />
                 <span>Complete All Tasks</span>
               </li>
               <li className="cursor-pointer">Clear completed</li>
@@ -70,11 +65,7 @@ function App() {
 
               <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
-              <img
-                src="./images/cancel.png"
-                className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
-                alt="Cancel"
-              />
+              <X />
             </div>
 
             {/* <!-- todo --> */}
@@ -102,11 +93,7 @@ function App() {
 
               <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
-              <img
-                src="./images/cancel.png"
-                className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
-                alt="Cancel"
-              />
+              <X />
             </div>
           </div>
 
