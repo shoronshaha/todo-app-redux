@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
-
+import cancelImage from "../assets/images/cancel.png";
 import { colorSelected, deleted, toggled } from "../redux/todos/actions";
-import { X } from "lucide-react";
 
 export default function Todo({ todo }) {
   const dispatch = useDispatch();
@@ -68,7 +67,12 @@ export default function Todo({ todo }) {
         onClick={() => handleColorChange(id, "red")}
       ></div>
 
-      <X onClick={() => handleDelete(id)} />
+      <img
+        src={cancelImage}
+        className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
+        alt="Cancel"
+        onClick={() => handleDelete(id)}
+      />
     </div>
   );
 }
