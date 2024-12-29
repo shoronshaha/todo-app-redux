@@ -58,6 +58,9 @@ const reducer = (state = initialState, action) => {
 
     case CLEARCOMPLETED:
       return state.filter((todo) => !todo.completed);
+
+    default:
+      return state;
   }
 };
 
