@@ -13,6 +13,7 @@ export const added = (todoText) => {
     payload: todoText,
   };
 };
+
 export const toggled = (todoId) => {
   return {
     type: TOGGLED,
